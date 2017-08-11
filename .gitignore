@@ -5,11 +5,16 @@
 **/*.user
 **/**/*.user
 
+#folders
 bin
 obj
+TestResults
+fonts
 _ReSharper*
-*.dotCover
 
+
+
+*.dotCover
 *.csproj.user
 *.resharper.user
 *.ReSharper.user
@@ -20,6 +25,8 @@ _ReSharper*
 *.orig
 *.user
 *.pfx
+bootstrap.*
+jquery-*
 
 
 log4net.config

@@ -1,0 +1,33 @@
+﻿@model AppMVC.Models.UserDetails
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        @Html.ValidationMessage("CredentialError", new { style = "color:red;" })
+        @using (Html.BeginForm("DoLogin", "Authentication", FormMethod.Post))
+        {
+            @Html.LabelFor(c => c.UserName)
+
+            @Html.TextBoxFor(x => x.UserName)
+            @Html.ValidationMessageFor(x => x.UserName)
+
+            <br />
+            @Html.LabelFor(c => c.Password)
+
+            @Html.PasswordFor(x => x.Password)
+            <br />            
+            <input type="submit" name="BtnSubmit" value="Login" />
+        }
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+</body>
+</html>

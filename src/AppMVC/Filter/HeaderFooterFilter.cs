@@ -19,7 +19,7 @@ namespace AppMVC.Filter
                 {
                     bvm.UserName = HttpContext.Current.User.Identity.Name;
                     bvm.FooterData = new FooterViewModel();
-                    bvm.FooterData.CompanyName = "StepByStepSchools";//Can be set to dynamic value
+                    bvm.FooterData.CompanyName = "YCJ-";//Can be set to dynamic value
                     bvm.FooterData.Year = DateTime.Now.Year.ToString();
                 }
             }

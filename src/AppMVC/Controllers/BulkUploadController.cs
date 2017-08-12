@@ -46,8 +46,7 @@ namespace AppMVC.Controllers
 
         private List<Employee> GetEmployees(FileUploadViewModel model)
         {
-            //if long process...
-            Thread.Sleep(8000);
+            //if long process...        
             List<Employee> employees = new List<Employee> ();
             StreamReader csvreader = new StreamReader(model.fileUpload.InputStream);
             csvreader.ReadLine(); // Assuming first line is header

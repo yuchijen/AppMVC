@@ -19,5 +19,12 @@ namespace AppMVC.Controllers
             HandleErrorInfo eInfo = new HandleErrorInfo(e, "Unknown", "Unknown");
             return View("Error", eInfo);
         }
+
+        public ActionResult ServerError()
+        {
+            Exception e = new Exception("We have some interal problem now...");
+            HandleErrorInfo eInfo = new HandleErrorInfo(e, "Unknown", "Unknown");
+            return View("Error", eInfo);
+        }
     }
 }

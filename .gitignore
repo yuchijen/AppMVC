@@ -26,7 +26,7 @@ _ReSharper*
 *.user
 *.pfx
 bootstrap.*
-jquery-*
+jquery*
 
 
 log4net.config

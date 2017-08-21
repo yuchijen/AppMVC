@@ -53,7 +53,7 @@ function IsValid() {
         errMsg += "Last Name should not contain more than 5 character \n";
     }
     
-    if ($('#TxtSalary').val() == "" || IsNaN($('#TxtSalary').val())) {
+    if ($('#TxtSalary').val() == "" || isNaN($('#TxtSalary').val())) {
         errMsg += "Salary should not be empty \n";
     }
     

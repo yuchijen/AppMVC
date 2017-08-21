@@ -87,3 +87,4 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+src/AppMVC/Content/themes/base/

@@ -53,7 +53,7 @@ namespace AppMVC.Controllers
                 FormsAuthentication.SetAuthCookie(u.UserName, false);
                 
                 Session["IsAdmin"] = IsAdmin;
-                return RedirectToAction("Index", "Employee");
+                return RedirectToAction("Index", "Main", new { area = "SPA" });
                 //New Code End
             }
             else

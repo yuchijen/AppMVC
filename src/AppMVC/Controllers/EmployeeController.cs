@@ -72,8 +72,7 @@ namespace AppMVC.Controllers
                         
                         return View("CreateEmployee", vm); // Day 4 Change - Passing e here
                     }
-
-                //return Content(e.FirstName + "|" + e.LastName + "|" + e.Salary);
+                    
                 case "Cancel":
                     return RedirectToAction("Index");
             }

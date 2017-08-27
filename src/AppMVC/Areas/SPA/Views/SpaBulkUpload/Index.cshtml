@@ -28,7 +28,11 @@
                 $('#EmployeeTable').append(newTr);
             }
             $('#DivBulkUpload').dialog('close');
-        });
+            }).fail(function (err) {
+
+                if (err.responseText.indexOf("not in a correct format")!=0)
+                    alert('Error: Please check data format in file.');
+            });
     }
 </script>
 

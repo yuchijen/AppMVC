@@ -23,10 +23,35 @@
     <script src="~/Scripts/jquery-1.12.4.js"></script>
     <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
     <script>
+        $(function () {
+            $(document).ajaxStart(function () {
+                $("<div id='loadingDiv'><img src=\"../Content/themes/base/images/loading.gif\" /></div>").dialog(
+                    {
+                        width: 'auto', height: 'auto', modal: true,
+                        //remove dialog title bar, but keep close button
+                        create: function (event, ui) {
+                            var dialog = $(this).closest(".ui-dialog");
+                            dialog.find(".ui-dialog-titlebar-close")
+                                .appendTo(dialog)
+                                .css({
+                                    position: "absolute",
+                                    top: 0,
+                                    right: 0,
+                                    margin: "3px"
+                                });
+                            dialog.find(".ui-dialog-titlebar").remove();
+                        }
+                    });
+            });
+            $(document).ajaxStop(function () {
+                $('#loadingDiv').remove();
+            });            
+        });
+        
         function OpenAddNew() {
             $.get("/SPA/Main/AddNew").then
                 (
-                    function (r) {
+                function (r) {
                     $("<div id='DivCreateEmployee'></div>").html(r).
                         dialog({
                             width: 'auto', height: 'auto', modal: true, title: "Create New Employee",
@@ -37,6 +62,7 @@
                     }
                 ).fail(                
                 function (response) {
+                    $('#loadingDiv').remove();
                         alert('Loading Add Page Error: ' + response.responseText);
                 });                    
         }

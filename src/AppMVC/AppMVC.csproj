@@ -163,6 +163,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Logger\FileLogger.cs" />
+    <Compile Include="Migrations\201709050607118_AddEmployeeDateOfBirth.cs" />
+    <Compile Include="Migrations\201709050607118_AddEmployeeDateOfBirth.Designer.cs">
+      <DependentUpon>201709050607118_AddEmployeeDateOfBirth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeeBusinessLayer.cs" />
     <Compile Include="Models\UserDetails.cs" />
@@ -239,6 +244,9 @@
     <Content Include="Areas\SPA\Views\Main\CreateEmployee.cshtml" />
     <Content Include="Scripts\EmployeeValidate.js" />
     <Content Include="Areas\SPA\Views\SpaBulkUpload\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\AppMVC20170831084336 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\AppMVC20170901091608 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\AppMVC20170901112336 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />
@@ -297,6 +305,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201709050607118_AddEmployeeDateOfBirth.resx">
+      <DependentUpon>201709050607118_AddEmployeeDateOfBirth.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

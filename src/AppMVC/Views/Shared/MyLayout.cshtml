@@ -8,6 +8,13 @@
     @RenderSection("HeaderSection", false)
 </head>
 <body>
+    <div class="navbar-collapse collapse" style="text-align:left">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("AngualarJs Page", "Index", "NgPage")</li>
+            <li>@Html.ActionLink("SPA MVC", "Index", "SPA/Main")</li>
+        </ul>
+    </div>
     <div style="text-align:right">
         Hello, @Model.UserName
         <a href="/Authentication/Logout">Logout</a>

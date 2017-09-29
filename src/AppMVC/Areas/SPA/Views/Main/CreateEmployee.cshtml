@@ -22,10 +22,12 @@
                 {
                     FirstName: $('#TxtFName').val(),
                     LastName: $('#TxtLName').val(),
-                    Salary: $('#TxtSalary').val()
+                    Salary: $('#TxtSalary').val(),
+                    DateOfBirth: $('#TxtDateOfBirth').val().toISOString()
                 };
+            //debugger;
             $.post("/SPA/Main/SaveEmployee", e).then(
-                function (r) {
+                function (r) {                    
                     var newTr = $('<tr></tr>');
                     var nameTD = $('<td></td>');
                     var salaryTD = $('<td></td>');
@@ -95,6 +97,19 @@
         <tr>
             <td colspan="2" align="right">
                 @Html.ValidationMessage("Salary")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Dob:
+            </td>
+            <td>
+                <input type="text" id="TxtDateOfBirth" name="DateOfBirth" value="@Model.DateOfBirth" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right">
+                @Html.ValidationMessage("DateOfBirth")
             </td>
         </tr>
         <tr>

@@ -10,5 +10,7 @@ namespace AppMVC.ViewModels.SPA
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Salary { get; set; }
+
+        public DateTime DateOfBirth { get; set; }
     }
 }

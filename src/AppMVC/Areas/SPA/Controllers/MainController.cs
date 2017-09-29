@@ -56,9 +56,11 @@ namespace AppMVC.Areas.SPA.Controllers
             else
                 empViewModel.SalaryColor = "green";
             
+            
             return Json(empViewModel);
         }
 
+        [AdminFilter]
         public ActionResult EmployeeList()
         {
             EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();
@@ -73,13 +75,10 @@ namespace AppMVC.Areas.SPA.Controllers
                 empViewModel.EmployeeName = emp.FirstName + " " + emp.LastName;
                 empViewModel.Salary = emp.Salary.ToString("C");
                 if (emp.Salary > 15000)
-                {
                     empViewModel.SalaryColor = "yellow";
-                }
                 else
-                {
                     empViewModel.SalaryColor = "green";
-                }
+                
                 empViewModels.Add(empViewModel);
             }
             employeeListViewModel.Employees = empViewModels;

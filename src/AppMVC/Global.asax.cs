@@ -19,6 +19,7 @@ namespace AppMVC
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SalesERPDAL>());
+            //ModelBinders.Binders[typeof(DateTime)] = new DateAndTimeModelBinder() { ICustomFormatter = "yyyy-MM-dd" };
         }
     }
 }

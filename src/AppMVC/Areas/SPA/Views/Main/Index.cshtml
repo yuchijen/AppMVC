@@ -6,10 +6,18 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link href="~/Content/themes/base/all.css" rel="stylesheet" />    
-    
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
     <title>Employee Single Page Application</title>
 </head>
 <body>
+    <div class="navbar-collapse collapse" style="text-align:left">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Home", "Index", "Home", new { area="" }, null)</li>
+            <li>@Html.ActionLink("AngualarJs Page", "Index", "NgPage", new { area = "" }, null)</li>
+            <li>@Html.ActionLink("SPA MVC", "Index", "SPA/Main", new { area = "" }, null)</li>
+        </ul>
+    </div>
     <div style="text-align:right">
         Hello, @Model.UserName
         <a href="/Authentication/Logout">Logout</a>

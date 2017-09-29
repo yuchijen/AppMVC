@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html ng-app="AppMVC" >
+<head>
+    <title ng-bind="models.helloAngular"></title>
+</head>
+<body>
+    <input type="text" ng-model="models.helloAngular" />
+    <h1>{{models.helloAngular}}</h1>
+
+    <ul>
+        <li><a href="#/SPAMain">Route One</a></li>
+        <li><a href="#/EmployeeAdd">Route Two</a></li>
+    </ul>
+    <ul>
+        <li><a href="#/login">Login</a></li>
+        <li><a href="#/register">Register</a></li>
+    </ul>
+
+    <div ng-view></div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
+    
+    @Scripts.Render("~/bundles/AppMVC")
+</body>
+
+</html>

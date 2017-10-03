@@ -5,9 +5,9 @@ using System.Web;
 
 namespace AppMVC.ViewModels.SPA
 {
-    public class MainViewModel
+    public class MainViewModel : BaseViewModel
     {
-        public string UserName { get; set; }
-        public FooterViewModel FooterData { get; set; }//New Property
+        //public string UserName { get; set; }
+        //public FooterViewModel FooterData { get; set; }//New Property
     }
 }

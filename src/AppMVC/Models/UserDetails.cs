@@ -14,4 +14,13 @@ namespace AppMVC.Models
         public string Password { get; set; }
 
     }
+    public class UserEntities
+    {
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public string username { get; set; }
+        public string Password { get; set; }        
+        public int Id { get; set; }
+
+    }
 }

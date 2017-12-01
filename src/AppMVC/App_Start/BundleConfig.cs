@@ -35,6 +35,20 @@ namespace AppMVC
             //.IncludeDirectory("~/Scripts/Factories", "*.js")
             .Include("~/Scripts/AppMVC.js"));
 
+            //angularjs signin feature script and css
+            bundles.Add(new StyleBundle("~/Content/signInCss").Include(
+                "~/Content/signin-content/signin.css"
+                ));
+
+            bundles.Add(new ScriptBundle("~/bundles/SignIn").Include(
+                "~/Scripts/signin.js",           
+                "~/Scripts/app-services/authentication.service.js",
+                "~/Scripts/app-services/flash.service.js",
+                "~/Scripts/app-services/user.service.local-storage.js",
+                "~/Scripts/home/home.controller.js",
+                "~/Scripts/login/login.controller.js",
+                "~/Scripts/register/register.controller.js"
+                ));
         }
     }
 }

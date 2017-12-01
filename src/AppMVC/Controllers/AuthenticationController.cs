@@ -23,6 +23,11 @@ namespace AppMVC.Controllers
             return RedirectToAction("Login");
         }
 
+        public ActionResult SignIn()
+        {
+            return View();
+        }
+
         public string RouteTest(int? testData)
         {
             //ViewBag.TestData = testData;

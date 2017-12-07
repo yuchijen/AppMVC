@@ -16,6 +16,20 @@
             <input type="text" name="username" id="username" class="form-control" ng-model="vm.user.username" required />
             <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
         </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
+            <label for="username">Email</label>
+            <input type="email" name="email" id="email" class="form-control" ng-model="vm.user.email" required />           
+            <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block">email is required</span>
+            <span ng-show="form.email.$error.email" class="help-block"> Not valid email</span>
+        </div>
+        
+        <div class="form-group" ng-class="{ 'has-error': form.dob.$dirty && form.dob.$error.required }">
+            <label for="username">Dob</label>
+            <input calendar class="form-control" ng-model='vm.user.dob'  name="dob" id="dob" required />
+            <span ng-show="form.dob.$dirty && form.dob.$error.required" class="help-block">Dob is required</span>
+        </div>
+
         <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
             <label for="password">Password</label>
             <input type="password" name="password" id="password" class="form-control" ng-model="vm.user.password" required />

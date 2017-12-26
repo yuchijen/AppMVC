@@ -26,7 +26,7 @@
         
         <div class="form-group" ng-class="{ 'has-error': form.dob.$dirty && form.dob.$error.required }">
             <label for="username">Dob</label>
-            <input calendar class="form-control" ng-model='vm.user.dob'  name="dob" id="dob" required />
+            <input  id="datepicker" type="text" class="form-control" ng-model='vm.user.dob'  name="dob"  required />
             <span ng-show="form.dob.$dirty && form.dob.$error.required" class="help-block">Dob is required</span>
         </div>
 
